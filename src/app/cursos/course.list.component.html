@@ -1,0 +1,50 @@
+<h2>Curso Angular</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Code</th>
+        <th>Release Date</th>
+        <th>Rating</th>
+        <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let courses of courses">
+            <td><img [src]="courses.imageUrl" alt="img-logo" width="50px" height="50px"></td>
+            <td>{{courses.name}}</td>
+            <td>{{courses.price}}</td>
+            <td>{{courses.code}}</td>
+            <td>{{courses.releaseDate}}</td>
+            <td>
+                <app-star [rating]='courses.rating'></app-star>
+            </td>
+            
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<div class="container">
+    <h2>Cadastro:</h2>
+    <form action="post">
+        <label for="name">
+            Nome:
+            <input type="nome" placeholder="nome">
+        </label>
+        <br/>
+        <label for="name">
+            E-mail
+            <input type="mail" placeholder="Seu melhor e-mail...">
+        </label>
+        <br/>
+        <label for="name">
+            Contato
+            <input type="text" placeholder="(**) *****-****">
+        </label>
+        <br/>
+        <input type="submit" value="enviar">
+    </form>
+</div>
+
